@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Pràctica Bootstrap Grid</title>
+
+    <!-- Bootstrap 6 Alpha 1 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+
+<header>
+<div class="nav-overflow" data-bs-toggle="nav-overflow">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Products</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Services</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Analytics</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Reports</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Settings</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Help</a>
+    </li>
+  </ul>
+</div>
+<body>
+
+    <div class="container my-4">
+        <header class="fg-white text-dark text-center p-3 mb-4 rounded">
+            <h1 class="text-dark">
+                Benvinguts al meu primer disseny amb Bootstrap
+            </h1>
+            <p class="mb-0 text-dark">
+                Descobreix noves destinacions amb Rumboo
+            </p>
+        </header>
+
+        <section>
+            <div class="row g-3">
+                <div class="col-12 md:col-6 lg:col-4">
+                    <article class="bg-light p-3 rounded h-auto">
+                        <h2>Europa</h2>
+                        <p>
+                            Descobreix ciutats històriques, monuments
+                            emblemàtics i paisatges increïbles.
+                        </p>
+                        <img
+                            src="../img/alemania.jpg"
+                            alt="Imatge d'exemple d'Europa"
+                            class="img-fluid rounded">
+                    </article>
+                </div>
+                <div class="col-12 md:col-6 lg:col-4">
+                    <article class="bg-light p-3 rounded h-auto">
+                        <h2>Àsia</h2>
+                        <p>
+                            Explora cultures fascinants, temples
+                            tradicionals i destinacions plenes d'història.
+                        </p>
+                        <img
+                            src="../img/japon.jpg"
+                            alt="Imatge d'exemple d'Àsia"
+                            class="img-fluid rounded">
+                    </article>
+                </div>
+                <div class="col-12 md:col-6 lg:col-4">
+                    <article class="bg-light p-3 rounded h-auto">
+                        <h2>Àfrica</h2>
+                        <p>
+                            Gaudeix de la natura, els paisatges espectaculars
+                            i les experiències úniques que ofereix el continent.
+                        </p>
+                        <img
+                            src="../img/africa.jpg"
+                            alt="Imatge d'exemple d'Àfrica"
+                            class="img-fluid rounded">
+                    </article>
+                </div>
+                <div class="col-12 md:col-6 lg:col-4">
+                    <article class="bg-light p-3 rounded h-auto">
+                        <h2>Amèrica</h2>
+                        <p>
+                            Descobreix grans ciutats, platges espectaculars
+                            i paisatges naturals impressionants, des del Canadà
+                            fins a Xile.
+                        </p>
+                        <img
+                            src="../img/america.jpg"
+                            alt="Imatge d'exemple d'Amèrica"
+                            class="img-fluid rounded">
+                    </article>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-light text-center p-3 mt-4 rounded">
+            <p class="mb-0">© 2026 Institut Barres i Ones</p>
+        </footer>
+    </div>
+
+    <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>
