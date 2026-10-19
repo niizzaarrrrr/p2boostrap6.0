@@ -1,17 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumbo</title>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rumboo - Navegación</title>
+
+    <!-- Bootstrap 6 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 </head>
+
 <body>
-    <div class="pruebacontainer" id="pruebacontainer">
-        <div class="row">
-                <h1>Hello, world!</h1>
+
+    <nav class="navbar bg-light border-bottom">
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold" href="#">Rumboo</a>
+
+            <!-- Nav Overflow -->
+            <div class="nav-overflow" data-bs-toggle="nav-overflow">
+                <ul class="nav nav-pills">
+                    <li class="nav-item nav-overflow-keep">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Destinos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Vuelos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hoteles</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ofertas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Experiencias</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
             </div>
+
         </div>
-    <script src="../bootstrap/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </nav>
+
+    <main class="container py-5">
+        <h1>Descubre tu próximo viaje</h1>
+        <p>Encuentra destinos, vuelos y hoteles con Rumboo.</p>
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
 </html>
