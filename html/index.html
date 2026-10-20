@@ -1,67 +1,77 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Rumboo - Navegación</title>
-
-    <!-- Bootstrap 6 CSS -->
+    <title>Rumboo | Descobreix noves destinacions</title>
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
         rel="stylesheet">
 </head>
-
-<body>
-
-    <nav class="navbar bg-light border-bottom">
-        <div class="container-fluid">
-
-            <a class="navbar-brand fw-bold" href="#">Rumboo</a>
-
-            <!-- Nav Overflow -->
-            <div class="nav-overflow" data-bs-toggle="nav-overflow">
-                <ul class="nav nav-pills">
-                    <li class="nav-item nav-overflow-keep">
-                        <a class="nav-link active" href="#">Inicio</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Destinos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Vuelos</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Hoteles</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Ofertas</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Experiencias</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-
+<header>
+        <nav class="navbar sm:navbar-expand bg-1 fg-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../img/rumbo.png" alt="Logo de Rumboo" width="50" height="50" class="d-inline-block align-text-top">
+    </a>
+    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <dialog class="drawer drawer-end" tabindex="-1" id="navbarNavAltMarkup" aria-labelledby="navbarNavAltMarkupLabel">
+      <div class="drawer-header">
+        <h5 class="drawer-title" id="navbarNavAltMarkupLabel">Rumboo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+      </div>
+      <div class="drawer-body">
+        <div class="nav nav-pills navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Pagina Principal</a>
+          <a class="nav-link" href="#">Allotjament</a>
+          <a class="nav-link" href="#">Experiencies</a>
+          <a class="nav-link" href="#">Serveis</a>
+          <a class="nav-link disabled" aria-disabled="true">Renting de cotxes (Proximament)</a>
         </div>
-    </nav>
+      </div>
+    </dialog>
+  </div>
+</nav>
+</header>
+<body>
+<div class="container" id="benvinguts">
+    <div class="row">
+        <div class="lg:col-3 md:col-6 sm:col-12">
+            <h1>Europa</h1>
+            <p>Descobreix les meravelles d'Europa amb Rumboo. Des de les històriques ciutats de París i Roma fins a les impressionants muntanyes dels Alps, Europa ofereix una varietat d'experiències culturals i naturals. Explora els seus museus, gaudeix de la seva gastronomia i submergeix-te en la seva rica història.</p>
+            <img src="../img/europa.jpg" class="img-thumbnail" alt="europa">
+        </div>
+        <div class="lg:col-3 md:col-6 sm:col-12">
+            <h1>Africa</h1>
+            <p>Explora la diversitat d'Àfrica amb Rumboo. Des dels deserts del Sàhara fins a les selvas del Congo, Àfrica és un continent ple de contrastos i aventures. Descobreix la seva fauna única, les seves cultures vibrants i els seus paisatges espectaculars.</p>
+            <img src="../img/africa.jpg" class="img-thumbnail" alt="africa">
+        </div>
+        <div class="lg:col-3 md:col-6 sm:col-12">
+            <h1>Asia</h1>
+            <p>Descobreix la rica cultura i la natura impressionant d'Àsia amb Rumboo. Des dels temples antics de Tailàndia fins als paisatges montanyosos de Japó, Àsia ofereix una varietat d'experiències úniques. Gaudeix de la seva gastronomia diversa, explora les seves ciutats dinàmiques i submergeix-te en la seva història millenària.</p>
+            <img src="../img/japon.jpg" class="img-thumbnail" alt="asia">
+        </div>
+            <div class="lg:col-3 md:col-6 sm:col-12">
+            <h1>Amèrica</h1>
+            <p>Explora la diversitat d'Amèrica amb Rumboo. Des dels deserts de l'Arizona fins a les selvas del Brasil, Amèrica és un continent ple de contrastos i aventures. Descobreix la seva fauna única, les seves cultures vibrants i els seus paisatges espectaculars.</p>
+            <img src="../img/america.jpg" class="img-thumbnail" alt="amèrica">
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>&copy; Rumboo. Tots els drets reservats.</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-    <main class="container py-5">
-        <h1>Descubre tu próximo viaje</h1>
-        <p>Encuentra destinos, vuelos y hoteles con Rumboo.</p>
-    </main>
 
-    <!-- Bootstrap JavaScript -->
+
     <script
         type="module"
         src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js">
