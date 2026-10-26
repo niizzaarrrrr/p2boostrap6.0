@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rumboo | Descobreix noves destinacions</title>
+</head>
+<link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+<body class="bg-black fg-white">
+<header>
+        <nav class="navbar sm:navbar-expand bg-1 fg-2">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../html/index.html">
+      <img src="../img/rumbo.png" alt="Logo de Rumboo" width="50" height="50" class="d-inline-block align-text-top">
+    </a>
+    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" aria-hidden="true"></span>
+    </button>
+    <dialog class="drawer drawer-end" tabindex="-1" id="navbarNavAltMarkup" aria-labelledby="navbarNavAltMarkupLabel">
+      <div class="drawer-header">
+        <h5 class="drawer-title" id="navbarNavAltMarkupLabel">Rumboo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+      </div>
+      <div class="drawer-body">
+        <div class="nav nav-pills navbar-nav">
+          <a class="nav-link" href="../html/index.html">Pagina Principal</a>
+          <a class="nav-link" href="../html/allotjament.html">Allotjament</a>
+          <a class="nav-link" href="../html/experiencies.html">Experiencies</a>
+          <a class="nav-link" href="../html/serveis.html">Serveis</a>
+          <a class="nav-link disabled" aria-disabled="true">Renting de cotxes (Proximament)</a>
+        </div>
+      </div>
+    </dialog>
+  </div>
+</nav>
+</header>
+<div class="row">
+        <div class="col-12 text-center">
+            <h2>La teva pròxima història comença aquí</h2>
+            <p>Tria què t'agradaria viure, prepara la motxilla i deixa espai per a les sorpreses. A Rumboo t'ajudem a trobar experiències que faran del teu viatge un record per sempre.</p>
+        </div>
+      </div>
+      <form class="row g-3">
+  <div class="col-12">
+    <label for="selectedApartment" class="form-label">Pis seleccionat</label>
+    <input type="text" class="form-control" id="selectedApartment" placeholder="Encara no has seleccionat cap pis" readonly>
+  </div>
+  <div class="md:col-6">
+    <label for="inputEmail4" class="form-label">Correu electrònic</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+<div class="md:col-6">
+  <label for="password1" class="form-label">Contrasenya</label>
+  <input type="password" class="form-control" id="password1" placeholder="Contrasenya Forta Siusplau">
+  <div class="strength" data-bs-strength>
+    <div class="strength-segment"></div>
+    <div class="strength-segment"></div>
+    <div class="strength-segment"></div>
+    <div class="strength-segment"></div>
+  </div>
+</div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Adreça</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Avinguda, carrer, carreró, etc.">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Adreça 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartament, estudio, o pis">
+  </div>
+  <div class="md:col-6">
+    <label for="inputCity" class="form-label">Pais</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="md:col-4">
+    <label for="inputState" class="form-label">Ciutat</label>
+    <select id="inputState" class="form-control">
+      <option selected>La teva ciutat</option>
+      <option>...</option>
+    </select>
+  </div>
+  <div class="md:col-2">
+    <label for="inputZip" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="inputZip">
+  </div>
+  <div class="col-12">
+    <div class="form-field">
+      <input type="checkbox" id="gridCheck" class="check">
+      <label for="gridCheck">
+        Entenc que les meves dades seran utilitzades per a fins de màrqueting i accepto la política de privacitat.
+      </label>
+    </div>
+  </div>
+</form>
+<div class="row">
+<div class="col-12 text-center">
+            <h2>Calendari d'experiències</h2>
+            <p>Consulta les dates disponibles per a les experiències que t'interessen i planifica el teu viatge amb antelació. No et perdis cap oportunitat de viure moments únics.</p>
+<div data-bs-toggle="datepicker" data-bs-inline="true" data-bs-selection-mode="multiple-ranged"></div>
+</div>
+<button type="button" class="btn-solid theme-primary" data-bs-toggle="dialog" data-bs-target="#slideUpDialog">
+  Guardar els canvis i enviar
+</button>
+<dialog class="dialog dialog-slide-up" id="slideUpDialog">
+  <div class="dialog-header">
+    <h1 class="dialog-title">Rumbo</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
+  </div>
+  <div class="dialog-body">
+    <p>Segur que vols guardar els canvis i enviar-los?</p>
+  </div>
+  <div class="dialog-footer">
+    <button type="button" class="btn-solid theme-secondary" data-bs-dismiss="dialog">Tancar</button>
+    <button type="button" class="btn-solid theme-primary">Guardar els canvis i enviar</button>
+  </div>
+</dialog>
+        <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
