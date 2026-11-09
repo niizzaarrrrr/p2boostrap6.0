@@ -26,7 +26,7 @@
       </div>
       <div class="drawer-body">
         <div class="nav nav-pills navbar-nav">
-          <a class="nav-link" href="../html/index.html">Rumbo 🌍</a>
+          <a class="nav-link" href="../index.html">Rumbo 🌍</a>
           <a class="nav-link" href="../html/allotjament.html">Allotjament 🏠</a>
           <a class="nav-link" href="../html/experiencies.html">Experiències 🎈</a>
           <a class="nav-link" href="../html/serveis.html">Serveis 🔔</a>
@@ -47,79 +47,89 @@
             <p>Tria què t'agradaria viure, prepara la motxilla i deixa espai per a les sorpreses. A Rumboo t'ajudem a trobar experiències que faran del teu viatge un record per sempre.</p>
         </div>
       </div>
-      <form class="row g-3">
-  <div class="col-12">
-    <label for="selectedApartment" class="form-label">Pis seleccionat</label>
-    <input type="text" class="form-control" id="selectedApartment" placeholder="Encara no has seleccionat cap pis" readonly>
+      <form class="row g-3" data-bs-validate>
+  <div class="form-field col-12 md:col-6">
+    <label for="nomViatger" class="form-label">Nom i cognoms</label>
+    <input type="text" class="form-control" id="nomViatger" autocomplete="name" required aria-describedby="nomViatgerFeedback">
+    <div id="nomViatgerFeedback" class="tooltip invalid-tooltip">Introdueix el teu nom i cognoms.</div>
   </div>
-  <div class="md:col-6">
-    <label for="inputEmail4" class="form-label">Correu electrònic</label>
-    <input type="email" class="form-control" id="inputEmail4">
+  <div class="form-field col-12 md:col-6">
+    <label for="correuViatger" class="form-label">Correu electrònic</label>
+    <input type="email" class="form-control" id="correuViatger" autocomplete="email" required aria-describedby="correuViatgerFeedback">
+    <div id="correuViatgerFeedback" class="tooltip invalid-tooltip">Introdueix una adreça electrònica vàlida.</div>
   </div>
-<div class="md:col-6">
-  <label for="password1" class="form-label">Contrasenya</label>
-  <input type="password" class="form-control" id="password1" placeholder="Contrasenya Forta Siusplau">
-  <div class="strength" data-bs-strength>
-    <div class="strength-segment"></div>
-    <div class="strength-segment"></div>
-    <div class="strength-segment"></div>
-    <div class="strength-segment"></div>
+  <div class="form-field col-12 md:col-6">
+    <label for="telefonViatger" class="form-label">Telèfon de contacte</label>
+    <input type="tel" class="form-control" id="telefonViatger" autocomplete="tel" aria-describedby="telefonViatgerHelp">
+    <small id="telefonViatgerHelp" class="form-text">El farem servir només per contactar amb tu sobre el viatge.</small>
   </div>
-</div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Adreça</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Avinguda, carrer, carreró, etc.">
-  </div>
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Adreça 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartament, estudio, o pis">
-  </div>
-  <div class="md:col-6">
-    <label for="inputCity" class="form-label">Pais</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
-  <div class="md:col-4">
-    <label for="inputState" class="form-label">Ciutat</label>
-    <select id="inputState" class="form-control">
-      <option selected>La teva ciutat</option>
-      <option>...</option>
+  <div class="form-field col-12 md:col-6">
+    <label for="paisDesti" class="form-label">País de destinació</label>
+    <select class="form-control" id="paisDesti" required aria-describedby="paisDestiFeedback">
+      <option selected disabled value="">Tria un país</option>
+      <option>Espanya</option>
+      <option>França</option>
+      <option>Itàlia</option>
+      <option>Portugal</option>
+      <option>Regne Unit</option>
+      <option>Grècia</option>
+      <option>Estats Units</option>
+      <option>Mèxic</option>
+      <option>Japó</option>
+      <option>Tailàndia</option>
+      <option>Marroc</option>
+      <option>Turquia</option>
     </select>
+    <div id="paisDestiFeedback" class="tooltip invalid-tooltip">Selecciona un país de destinació.</div>
   </div>
-  <div class="md:col-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip">
+  <div class="form-field col-12 md:col-4">
+    <label for="dataSortida" class="form-label">Data aproximada de sortida</label>
+    <input type="date" class="form-control" id="dataSortida" required aria-describedby="dataSortidaFeedback">
+    <div id="dataSortidaFeedback" class="tooltip invalid-tooltip">Selecciona una data aproximada de sortida.</div>
+  </div>
+  <div class="form-field col-12 md:col-4">
+    <label for="duradaViatge" class="form-label">Durada del viatge</label>
+    <select class="form-control" id="duradaViatge" required aria-describedby="duradaViatgeFeedback">
+      <option selected disabled value="">Selecciona la durada</option>
+      <option>Cap de setmana</option>
+      <option>1 setmana</option>
+      <option>2 setmanes</option>
+      <option>Més de 2 setmanes</option>
+    </select>
+    <div id="duradaViatgeFeedback" class="tooltip invalid-tooltip">Selecciona la durada del viatge.</div>
+  </div>
+  <div class="form-field col-12 md:col-4">
+    <label for="viatgers" class="form-label">Nombre de viatgers</label>
+    <input type="number" class="form-control" id="viatgers" min="1" required aria-describedby="viatgersFeedback">
+    <div id="viatgersFeedback" class="tooltip invalid-tooltip">Indica quantes persones viatjaran.</div>
+  </div>
+  <div class="form-field col-12">
+    <label for="tipusViatge" class="form-label">Quin tipus de viatge t'interessa?</label>
+    <select class="form-control" id="tipusViatge" required aria-describedby="tipusViatgeFeedback">
+      <option selected disabled value="">Tria una opció</option>
+      <option>Relax i platja</option>
+      <option>Cultura i ciutats</option>
+      <option>Aventura i natura</option>
+      <option>Viatge en família</option>
+      <option>Viatge romàntic</option>
+      <option>Creuer</option>
+    </select>
+    <div id="tipusViatgeFeedback" class="tooltip invalid-tooltip">Selecciona el tipus de viatge que t'interessa.</div>
+  </div>
+  <div class="form-field col-12">
+    <label for="detallsViatge" class="form-label">Explica'ns què tens al cap</label>
+    <textarea class="form-control" id="detallsViatge" rows="4" placeholder="Pressupost aproximat, activitats o qualsevol preferència..."></textarea>
+  </div>
+  <div class="form-field col-12">
+    <div class="switch">
+      <input type="checkbox" id="notificacionsViatge" role="switch" switch>
+    </div>
+    <label for="notificacionsViatge">Vull rebre novetats i ofertes de viatges per correu electrònic</label>
   </div>
   <div class="col-12">
-    <div class="form-field">
-      <input type="checkbox" id="gridCheck" class="check">
-      <label for="gridCheck">
-        Entenc que les meves dades seran utilitzades per a fins de màrqueting i accepto la política de privacitat.
-      </label>
-    </div>
+    <button class="btn-solid theme-primary justify-self-start" type="submit">Demana informació del viatge</button>
   </div>
 </form>
-<div class="row">
-<div class="col-12 text-center">
-            <h2>Calendari d'experiències</h2>
-            <p>Consulta les dates disponibles per a les experiències que t'interessen i planifica el teu viatge amb antelació. No et perdis cap oportunitat de viure moments únics.</p>
-<div data-bs-toggle="datepicker" data-bs-inline="true" data-bs-selection-mode="multiple-ranged"></div>
-</div>
-<button type="button" class="btn-solid theme-primary" data-bs-toggle="dialog" data-bs-target="#slideUpDialog">
-  Guardar els canvis i enviar
-</button>
-<dialog class="dialog dialog-slide-up" id="slideUpDialog">
-  <div class="dialog-header">
-    <h1 class="dialog-title">Rumbo</h1>
-    <button type="button" class="btn-close" data-bs-dismiss="dialog" aria-label="Close"></button>
-  </div>
-  <div class="dialog-body">
-    <p>Segur que vols guardar els canvis i enviar-los?</p>
-  </div>
-  <div class="dialog-footer">
-    <button type="button" class="btn-solid theme-secondary" data-bs-dismiss="dialog">Tancar</button>
-    <button type="button" class="btn-solid theme-primary">Guardar els canvis i enviar</button>
-  </div>
-</dialog>
 <footer>
   <div class="container py-4">
     <div class="row g-3">
@@ -140,5 +150,5 @@
         type="module"
         src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js">
     </script>
-</body>
-</html>
+        </body>
+        </html>
