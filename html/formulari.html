@@ -64,6 +64,11 @@
     <small id="telefonViatgerHelp" class="form-text">El farem servir només per contactar amb tu sobre el viatge.</small>
   </div>
   <div class="form-field col-12 md:col-6">
+    <label for="dataNaixement" class="form-label">Data de naixement</label>
+    <input type="date" class="form-control" id="dataNaixement" max="" required aria-describedby="dataNaixementFeedback">
+    <div id="dataNaixementFeedback" class="tooltip invalid-tooltip">Només poden enviar el formulari les persones majors d'edat.</div>
+  </div>
+  <div class="form-field col-12 md:col-6">
     <label for="paisDesti" class="form-label">País de destinació</label>
     <select class="form-control" id="paisDesti" required aria-describedby="paisDestiFeedback">
       <option selected disabled value="">Tria un país</option>
@@ -149,6 +154,22 @@
         <script
         type="module"
         src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <script>
+      const dataNaixement = document.getElementById("dataNaixement");
+      const avui = new Date();
+      const formatData = data => [
+        data.getFullYear(),
+        String(data.getMonth() + 1).padStart(2, "0"),
+        String(data.getDate()).padStart(2, "0")
+      ].join("-");
+      const limitEdat = formatData(new Date(avui.getFullYear() - 18, avui.getMonth(), avui.getDate()));
+      const missatgeEdat = "Només poden enviar el formulari les persones majors d'edat.";
+
+      dataNaixement.max = formatData(avui);
+      dataNaixement.addEventListener("input", () => {
+        dataNaixement.setCustomValidity(dataNaixement.value > limitEdat ? missatgeEdat : "");
+      });
     </script>
         </body>
         </html>
